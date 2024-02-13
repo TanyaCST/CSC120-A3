@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 class Conversation {
@@ -21,7 +23,7 @@ class Conversation {
     System.out.println(instruction);
 
     // Create an array to store transcript
-    String[] transcript = {};
+    List<String> transcript = new ArrayList<String>();
 
     int num_rounds = sc.nextInt();
 
@@ -88,7 +90,7 @@ class Conversation {
         System.out.println(response);
 
       }
-      //transcript.add(response);
+      transcript.add(response);
 
       // Modify i
       i++;

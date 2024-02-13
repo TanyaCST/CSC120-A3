@@ -1,7 +1,7 @@
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+//import java.util.ArrayList;
+//import java.util.List;
+//import java.util.Random;
 
 class Conversation {
   public static String[] canned_responses = {
@@ -23,78 +23,70 @@ class Conversation {
     System.out.println(instruction);
 
     // Create an array to store transcript
-    List<String> transcript = new ArrayList<String>();
+    //List<String> transcript = new ArrayList<String>();
 
     int num_rounds = sc.nextInt();
 
-    String greeting = "Hi! I'm chatbox 8546797. What's in your mind?";
+    String greeting = "Hi! I'm chatbox 8546797. You can call me Jerry. What's in your mind?";
     System.out.println(greeting);
 
-    for (int i =1; i <= num_rounds; i++) {
+    for (int i = 0; i < num_rounds; i++) {
       // Let users input things they want to ask.
-      String user_input = sc.nextLine();
-      System.out.println(user_input);
+      String user_input;
+      user_input = sc.nextLine();
   
-      String response;
+      String response = user_input;
   
       // Check mirror words 
       if(user_input.contains("I")) {
-        response = user_input.replace("I", "you");
-        System.out.println(response);
+        response = response.replaceAll("\\bI\\b", "you");
+      }
+
+      if(user_input.contains("am")){
+        response = response.replaceAll("\\bam\\b", "are");
+      }
+
+      if(user_input.contains("me")){
+        response =  response.replaceAll("\\bme\\b", "you");
+      }
+
+      if(user_input.contains("my")){ 
+        response = response.replaceAll("\\bmy\\b", "your");
       }
   
-      else if(user_input.contains("me")){
-        response =  user_input.replace("me", "you");
-        System.out.println(response);
+      if(user_input.contains("You")){ 
+        response = response.replaceAll("\\bYou\\b", "I");
       }
-  
-      else if(user_input.contains("my")){
-        response = user_input.replace("my", "your");
-        System.out.println(response);
+
+      if(user_input.contains("you")){ 
+        response = response.replaceAll("\\byou\\b", "me");
       }
-  
-      else if(user_input.contains("am")){
-        response = user_input.replace("am", "are");
-        System.out.println(response);
+
+      if(user_input.contains("your")){
+        response = response.replaceAll("\\byour\\b", "my");
       }
-  
-      else if(user_input.contains("You")){
-        response = user_input.replace("You", "I");
-        System.out.println(response);
-      }
-  
-      else if(user_input.contains("you")){
-        response = user_input.replace("you", "me");
-        System.out.println(response);
-      }
-  
-      else if(user_input.contains("your")){
-        response = user_input.replace("your", "my");
-        System.out.println(response);
-      }
-  
-      else if(user_input.contains("are")){
-        response = user_input.replace("are", "am");
-        System.out.println(response);
-      }
+
+      if(user_input.contains("are")){
+        response = response.replaceAll("\\bare\\b", "am");
+      } 
   
       else{
         // output canned responses
-        Random rand = new Random();
-        int indexCR = rand.nextInt();
-        response = canned_responses[indexCR];
-        System.out.println(response);
-  
-      }
-      transcript.add(response);
-        
-        // After each loop store everything? 
+        //Random rand = new Random();
+        //int indexCR = rand.nextInt(1,4);
+        //response = canned_responses[indexCR];
   
       }
 
-      for(int j = 0; j <= transcript.size(); j++){
-        System.out.println(transcript.get(j));
+      System.out.println(response);
+
+      //transcript.add(response);
+  
       }
+
+      //for(int j = 0; j <= transcript.size(); j++){
+        //System.out.println(transcript.get(j));
+      //}
 
     sc.close();
   }

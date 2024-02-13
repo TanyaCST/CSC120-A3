@@ -16,21 +16,21 @@ __YES___ 1 pt: `reflection.md` lists the classmates you consulted & TA hours att
 
 __YES___ 1 pt: Program queries user for number of conversation rounds
 
-_____ 1 pt: Program carries out requested number of conversation rounds
+__YES___ 1 pt: Program carries out requested number of conversation rounds
 
 __YES___ 1 pt: Allocates static array of canned responses
 
 ### Level 2 (3 pts)
 
-_____ 1 pt: Uses a canned response when no mirror words detected
+__YES___ 1 pt: Uses a canned response when no mirror words detected
 
-_____ 1 pt: Detects the requested set of mirror words (at minimum)
+__YES___ 1 pt: Detects the requested set of mirror words (at minimum)
 
-_____ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
+__YES___ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
 
 ### Level 3 (3 pts)
 
-_____ 1 pt: Makes all appropriate mirror replacements
+__YES___ 1 pt: Makes all appropriate mirror replacements
 
 _____ 1 pt: Stores transcript of the conversation in an array
 

@@ -32,9 +32,9 @@ __YES___ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowerca
 
 __YES___ 1 pt: Makes all appropriate mirror replacements
 
-_____ 1 pt: Stores transcript of the conversation in an array
+__YES___ 1 pt: Stores transcript of the conversation in an array
 
-_____ 1 pt: Prints transcript when terminating
+__YES___ 1 pt: Prints transcript when terminating
 
 ## Kudos:
 
@@ -50,7 +50,7 @@ _____ (Kudos!) Handles you --> me/I dilemma
 
 _____ 4 pts: Programs compile without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+__YES___ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 

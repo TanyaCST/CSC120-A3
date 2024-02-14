@@ -2,9 +2,11 @@ Use this file to record your reflection on this assignment.
 
 - Which classmates did you consult with while working on this assignment?
     Emily Ren
+    Emily Wang
 
 - Which session(s) of TA / office hours did you attend?
     Monday Feb 12th
+    Tuesday Feb 13th
 
 - What are your initial impressions of Java? 
     The syntax matters!!!

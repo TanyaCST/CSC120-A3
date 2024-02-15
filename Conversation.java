@@ -1,6 +1,10 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 class Conversation {
+  // Defined canned responses to generate random responses when chatbox cannot detect any mirror words.
   public static String[] canned_responses = {
     "Mmmhmmm",
     "Interesting. Tell me more.",
@@ -10,36 +14,40 @@ class Conversation {
   };
 
   public static void main(String[] arguments) {
-    // You will start the conversation here.
-
     // Let users input the number of rounds.
     Scanner sc = new Scanner(System.in);
 
-    // Declare an variable for greeting
-    String instruction = "Please enter the number of conversation rounds you want to go through:";
-    System.out.println(instruction);
-
     // Create an array to store transcript
     List<String> transcript = new ArrayList<>();
+    
     //String[]transcript = new String[]{"TRANSCRIPT"};
     transcript.add("TRANSCRIPT");
 
+    // Declare an variable for instruction and output it
+    String instruction = "Please enter the number of conversation rounds you want to go through:";
+    System.out.println(instruction);
+
+    // Let users input the number of rounds they want to go through
     int num_rounds = sc.nextInt();
 
+    // Declare an variable for greeting and output the greeting.
     String greeting = "Hi! I'm chatbox 8546797. You can call me Tom. What's in your mind?";
     System.out.println(greeting);
+
+    // Declare a variable to store user input.
     String user_input = sc.nextLine();
 
+    // Use for loop to check whether there are any mirrors in user input.
     for (int i = 1; i <= num_rounds; i++) {
       // Let users input things they want to ask.
       user_input = sc.nextLine();
 
+      // Add user input into transcript to record the conversation.
       transcript.add(user_input);
   
       String response = user_input;
   
       // Check mirror words 
-
       if(user_input.contains("I") ||
          user_input.contains("You") ||
          user_input.contains("am") ||
@@ -83,6 +91,7 @@ class Conversation {
         
       }
 
+      // Store randomly generated canned responses into responses if no mirror words detected
       else{
         // output canned responses
         Random rand = new Random();
@@ -91,8 +100,10 @@ class Conversation {
   
       }
 
+      // Output the response
       System.out.println(response);
 
+      // Store the response into transcript
       transcript.add(response);
   
       }
